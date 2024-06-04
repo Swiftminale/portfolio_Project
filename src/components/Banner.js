@@ -8,8 +8,8 @@ export const Banner = () => {
   const [isDeleted, setIsDeleted] = useState(false);
   const toRotate = ["Web Developer", "React Developer", "MERN Stack Developer"];
   const [text, setText] = useState("");
-  const period = 1000; // Decreased the period for faster rotation
-  const [delta, setDelta] = useState(150 - Math.random() * 50); // Decreased delta for faster typing
+  const period = 2000; // Decreased the period for faster rotation
+  const [delta, setDelta] = useState(300 - Math.random() * 100); // Decreased delta for faster typing
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -39,7 +39,7 @@ export const Banner = () => {
     } else if (isDeleted && updatedText === "") {
       setIsDeleted(false);
       setLoopNum(loopNum + 1);
-      setDelta(300); // Adjusted delta for a more consistent typing speed
+      setDelta(500); // Adjusted delta for a more consistent typing speed
     }
   };
 
