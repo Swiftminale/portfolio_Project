@@ -12,7 +12,6 @@ function App() {
       <Banner />
       <Skills />
       <Projects />
-
       <SpeedInsights />
     </div>
   );
