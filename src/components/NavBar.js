@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Navbar, Container, Nav, NavLink } from "react-bootstrap";
-import { useHistory } from "react-router-dom"; // If you are using React Router v5
+import { useNavigate } from "react-router-dom"; // Updated for React Router v6
 import logo2 from "../assets/img/logo2.png";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import Discord from "../assets/img/discord.svg";
@@ -9,7 +9,7 @@ import git from "../assets/img/git.svg";
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
-  const history = useHistory(); // If you are using React Router v5
+  const navigate = useNavigate(); // Updated for React Router v6
 
   useEffect(() => {
     const onScroll = () => {
@@ -29,7 +29,7 @@ export const NavBar = () => {
   };
 
   const navigateToContact = () => {
-    history.push("/contact");
+    navigate("/contact");
   };
 
   return (
