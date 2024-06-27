@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { Navbar, Container, Nav, NavLink } from "react-bootstrap";
 import logo2 from "../assets//img/logo2.png";
 import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
-import navIcon3 from "../assets/img/nav-icon3.svg";
+import Discord from "../assets/img/discord.svg";
+import git from "../assets/img/git.svg";
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
@@ -65,14 +65,17 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a href="linked In">
+              <a href="https://www.linkedin.com/in/minale-fetene-a70134161/">
                 <img src={navIcon1} alt="" />
               </a>
-              <a href="Facebook">
-                <img src={navIcon2} alt="" />
+              <a href="https://github.com/Swiftminale">
+                <img src={git} alt="" />
               </a>
-              <a href="instagram">
-                <img src={navIcon3} alt="" />
+              <a href="https://discord.com/channels/@minale2023">
+                <img src={Discord} alt="" />
+              </a>
+              <a href="https://swiftcomputertechnologies.dorik.io/">
+                <img src={logo2} alt="" />
               </a>
             </div>
             <button className="vvd" onclick={() => console.log("connect")}>
