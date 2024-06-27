@@ -1,15 +1,12 @@
 import { useState, useEffect } from "react";
 import { Navbar, Container, Nav, NavLink } from "react-bootstrap";
-import { useNavigate } from "react-router-dom"; // Updated for React Router v6
-import logo2 from "../assets/img/logo2.png";
+import logo2 from "../assets//img/logo2.png";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import Discord from "../assets/img/discord.svg";
 import git from "../assets/img/git.svg";
-
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
-  const navigate = useNavigate(); // Updated for React Router v6
 
   useEffect(() => {
     const onScroll = () => {
@@ -27,11 +24,6 @@ export const NavBar = () => {
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   };
-
-  const navigateToContact = () => {
-    navigate("/contact");
-  };
-
   return (
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
@@ -48,7 +40,7 @@ export const NavBar = () => {
               className={
                 activeLink === "home" ? "active navbar-link" : "navbar-link"
               }
-              onClick={() => onUpdateActiveLink("home")}
+              onclick={() => onUpdateActiveLink("home")}
             >
               Home
             </NavLink>
@@ -57,7 +49,7 @@ export const NavBar = () => {
               className={
                 activeLink === "skills" ? "active navbar-link" : "navbar-link"
               }
-              onClick={() => onUpdateActiveLink("skills")}
+              onclick={() => onUpdateActiveLink("skills")}
             >
               Skills
             </NavLink>
@@ -86,7 +78,7 @@ export const NavBar = () => {
                 <img src={logo2} alt="" />
               </a>
             </div>
-            <button className="vvd" onClick={navigateToContact}>
+            <button className="vvd" onclick={() => console.log("connect")}>
               <span>Let's connect</span>
             </button>
           </span>
